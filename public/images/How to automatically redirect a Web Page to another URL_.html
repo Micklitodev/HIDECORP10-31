@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://www.tutorialspoint.com/How-to-automatically-redirect-a-Web-Page-to-another-URL -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="https://static.criteo.net/js/ld/publishertag.prebid.js"></script><style type="text/css">.mui-textfield.mui-textfield--float-label > label {-webkit-transition:all .15s ease-out;-moz-transition:all .15s ease-out;-o-transition:all .15s ease-out;transition:all .15s ease-out;}</style><style type="text/css">@keyframes mui-btn-inserted{from{transform:none;}to{transform:none;}}.mui-btn{animation-duration:0.0001s;animation-name:mui-btn-inserted;}@keyframes mui-dropdown-inserted{from{transform:none;}to{transform:none;}}[data-mui-toggle="dropdown"]{animation-duration:0.0001s;animation-name:mui-dropdown-inserted;}@keyframes mui-btn-inserted,mui-dropdown-inserted{from{transform:none;}to{transform:none;}}.mui-btn[data-mui-toggle="dropdown"]{animation-duration:0.0001s;animation-name:mui-btn-inserted,mui-dropdown-inserted;}@keyframes mui-tab-inserted{from{transform:none;}to{transform:none;}}[data-mui-toggle="tab"]{animation-duration:0.0001s;animation-name:mui-tab-inserted;}@keyframes mui-textfield-inserted{from{transform:none;}to{transform:none;}}.mui-textfield > input{animation-duration:0.0001s;animation-name:mui-textfield-inserted;}@keyframes mui-textfield-inserted{from{transform:none;}to{transform:none;}}.mui-textfield > textarea{animation-duration:0.0001s;animation-name:mui-textfield-inserted;}@keyframes mui-select-inserted{from{transform:none;}to{transform:none;}}.mui-select > select{animation-duration:0.0001s;animation-name:mui-select-inserted;}@keyframes mui-node-inserted{from{transform:none;}to{transform:none;}}.mui-select > select ~ .mui-event-trigger{animation-duration:0.0001s;animation-name:mui-node-inserted;}@keyframes mui-node-disabled{from{transform:none;}to{transform:none;}}.mui-select > select:disabled ~ .mui-event-trigger{animation-duration:0.0001s;animation-name:mui-node-disabled;}</style>
+<title>How to automatically redirect a Web Page to another URL?</title>
+
+<meta name="description" content="Page redirection is a situation where you clicked a URL to reach a page X but internally you were directed to another page Y. It happens due to page redirection ...">
+<meta name="keywords" content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Tutorials, Articles, Programming, training, learning, quiz, preferences, examples, code">
+<link rel="canonical" href="https://www.tutorialspoint.com/How-to-automatically-redirect-a-Web-Page-to-another-URL">
+<link rel="shortcut icon" href="https://www.tutorialspoint.com/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" href="./How to automatically redirect a Web Page to another URL__files/style-min-v1.css">
+<script src="https://secure.quantserve.com/quant.js" async="" type="text/javascript"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="./How to automatically redirect a Web Page to another URL__files/async-ads.js"></script><script src="./How to automatically redirect a Web Page to another URL__files/script-min-v1.js"></script><link rel="stylesheet" type="text/css" href="./How to automatically redirect a Web Page to another URL__files/prettify.css">
+<script>
+function printPage() { window.print(); }
+function readCookie(name) {
+     var nameEQ = name + "=";
+     var ca = document.cookie.split(';');
+     for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+     }
+     return null;
+}
+</script>
+<script id="adp1" data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//cdn.adpushup.com/40046/adpushup.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script><script src="./How to automatically redirect a Web Page to another URL__files/adpushup.js" type="text/javascript" async=""></script>
+<script id="adp2" data-cfasync="false" type="text/javascript">(function(w, d) {var cval = readCookie('subscription_purchased');if(cval == '1'){ return; } var s = d.createElement('script'); s.src = '//delivery.adrecover.com/18107/adRecover.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script><script src="https://delivery.adrecover.com/18107/adRecover.js" type="text/javascript" async=""></script>
+<link rel="stylesheet" href="./How to automatically redirect a Web Page to another URL__files/style-qa.css">
+<style>
+.butnn-save a{color:#fff;} .notes_msg{color:green; margin-left:20px; margin-top:15px;}
+.right-menu .mui-btn {
+    background-color:#b82051;
+}
+a.demo {
+    background:#b82051;
+}
+li.heading {
+    background:#b82051;
+}
+.course-box{background:#b82051}
+.home-intro-sub p{color:#b82051}
+a.demo{
+   top: 12px;
+   float:right;
+}
+.prettyprint{
+   width: 99%;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="./How to automatically redirect a Web Page to another URL__files/prettify.css"><script type="text/javascript" async="" src="./How to automatically redirect a Web Page to another URL__files/jquery-2.2.2.min.js"></script><script src="./How to automatically redirect a Web Page to another URL__files/cse_element__en.js" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="./How to automatically redirect a Web Page to another URL__files/default+en.css"><link type="text/css" rel="stylesheet" href="./How to automatically redirect a Web Page to another URL__files/default.css"><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(233,233,233,1),rgba(233,233,233,0))}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><script type="text/javascript" async="" src="./How to automatically redirect a Web Page to another URL__files/pb.40046.1626691025353.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script type="text/javascript" async="" src="./How to automatically redirect a Web Page to another URL__files/quantcast.js"></script><script type="text/javascript">
+            // refreshTypes: {
+//     1: "Active View", -> this is default
+//     2: "Active Tab",
+//     3: "BG"
+// }
+!(function () {
+	var REFRESH_COUNTRY_MAP = {
+		US: {
+			//This is the country code where the given refesh is supposed to be applicable. To make it applicable across all countries use "default" in place of country code
+			refreshInterval: 30, // this is in seconds
+			refreshType: 3,
+			sectionIdsToRefresh: [] //in case sectionIdsToRefresh list is empty it will be applicable on units/sections
+		},
+GB: {
+			//This is the country code where the given refesh is supposed to be applicable. To make it applicable across all countries use "default" in place of country code
+			refreshInterval: 60, // this is in seconds
+			refreshType: 3,
+			sectionIdsToRefresh: [] //in case sectionIdsToRefresh list is empty it will be applicable on units/sections
+		},
+CA: {
+			//This is the country code where the given refesh is supposed to be applicable. To make it applicable across all countries use "default" in place of country code
+			refreshInterval: 60, // this is in seconds
+			refreshType: 3,
+			sectionIdsToRefresh: [] //in case sectionIdsToRefresh list is empty it will be applicable on units/sections
+		},
+		default: {
+			refreshInterval: 30,
+			refreshType: 2
+		}
+	};
+	var adpushup = window.adpushup || {};
+    adpushup.que = window.adpushup.que || [];
+	adpushup.que.push(function () {
+		var customRefreshConfig = REFRESH_COUNTRY_MAP[adpushup.config.country] || REFRESH_COUNTRY_MAP['default'];
+		customRefreshConfig.refreshType = customRefreshConfig.refreshType || REFRESH_COUNTRY_MAP['default'].refreshType;
+		customRefreshConfig.refreshInterval =
+			customRefreshConfig.refreshInterval || REFRESH_COUNTRY_MAP['default'].refreshInterval;
+		if (window.location.search.indexOf('apDebug=true') !== -1) {
+			window.currentRefreshConfig = customRefreshConfig;
+			window.REFRESH_COUNTRY_MAP = REFRESH_COUNTRY_MAP;
+		}
+		var isUnitToBeRefreshed = function (sectionId, sectionIdsToRefresh) {
+			return !sectionIdsToRefresh.length || sectionIdsToRefresh.indexOf(sectionId) !== -1;
+		};
+		var setupRefreshIntervalTimeForUnits = function (customRefreshConfig) {
+			// Handle refreshInterval Innovative ads
+			adpushup.config.innovativeAds.forEach(function (ad) {
+				if (ad.networkData.refreshSlot && isUnitToBeRefreshed(ad.id, customRefreshConfig.sectionIdsToRefresh)) {
+					ad.networkData.refreshInterval = customRefreshConfig.refreshInterval;
+				}
+			});
+			// Handle refreshInterval Manual Ads
+			adpushup.config.manualAds.forEach(function (ad, i) {
+				if (ad.networkData.refreshSlot && isUnitToBeRefreshed(ad.id, customRefreshConfig.sectionIdsToRefresh)) {
+					ad.networkData.refreshInterval = customRefreshConfig.refreshInterval;
+				}
+			});
+			//Handle refreshInterval Layout Ads
+			var experiment = adpushup.config.experiment;
+			for (var device in experiment) {
+				for (var page_group in experiment[device]) {
+					experiment[device][page_group].variations.forEach(function (variation, j) {
+						variation.ads.forEach(function (ad) {
+							if (
+								ad.networkData.refreshSlot &&
+								isUnitToBeRefreshed(ad.id, customRefreshConfig.sectionIdsToRefresh)
+							) {
+								ad.networkData.refreshInterval = customRefreshConfig.refreshInterval;
+							}
+						});
+					});
+				}
+			}
+		};
+		var setupUtilsCheckElementInViewPercentFn = function (customRefreshConfig) {
+			var utils = window.adpushup.utils;
+			var originalCheckElementInViewPercent = utils.checkElementInViewPercent.bind(utils);
+			//overwrite the function
+			window.adpushup.utils.checkElementInViewPercent = function (el) {
+				var $el = window.adpushup.$(el);
+				var elementOrigId = !!$el.data() ? $el.data().origId : '';
+				if (elementOrigId && isUnitToBeRefreshed(elementOrigId, customRefreshConfig.sectionIdsToRefresh)) {
+					switch (customRefreshConfig.refreshType) {
+						case 1:
+							utils.log(`ActiveView Refresh for ${elementOrigId}`);
+							return originalCheckElementInViewPercent(el);
+						case 2:
+							utils.log(`ActiveTab refresh for ${elementOrigId}`);
+							if (document.hasFocus()) {
+								return true;
+							}
+							break;
+						case 3:
+							utils.log(`BG refresh for ${elementOrigId}`);
+							return true;
+							break;
+					}
+				} else {
+					utils.log(`ActiveView refresh for ${elementOrigId}`);
+					return originalCheckElementInViewPercent(el);
+				}
+			};
+		};
+		if (customRefreshConfig && customRefreshConfig.sectionIdsToRefresh) {
+			setupRefreshIntervalTimeForUnits(customRefreshConfig);
+			setupUtilsCheckElementInViewPercentFn(customRefreshConfig);
+		}
+	});
+})();
+
+!(function () {
+  window._apPbJs = window._apPbJs || {};
+  window._apPbJs.que = window._apPbJs.que || [];
+  var enabledBidders = adpushup.utils.getQueryParams().enabledBidders;
+  if (enabledBidders) {
+    enabledBiddersArray = enabledBidders.split(",");
+    window.adpushup.utils.log(enabledBiddersArray);
+    window._apPbJs.que.push(function () {
+      window._apPbJs.onEvent("beforeRequestBids", function (adunits) {
+        var filteredAdUnits = [];
+        for (var i = 0; i < adunits.length; i++) {
+          var bidders = [];
+          var adUnit = adunits[i];
+          var adUnitBids = adUnit.bids;
+          for (var j = 0; j < adUnitBids.length; j++) {
+            if (enabledBiddersArray.indexOf(adUnitBids[j].bidder) !== -1) {
+              bidders.push(adUnitBids[j]);
+            }
+          }
+          adUnit.bids = bidders;
+          filteredAdUnits.push(adUnit);
+        }
+        adunits = filteredAdUnits;
+      });
+    });
+  }
+})();
+!(function () {
+  window._apPbJs = window._apPbJs || {};
+  window._apPbJs.que = window._apPbJs.que || [];
+  var bidderFilter = function (adunits) {
+    console.log(adunits);
+  };
+  var auctionEndCallback = function (auction) {
+    window.adpushup.utils.log(auction);
+  };
+  window._apPbJs.que.push(function () {
+    // window._apPbJs.onEvent("beforeRequestBids", bidderFilter);
+    window._apPbJs.onEvent("auctionEnd", auctionEndCallback);
+  });
+})();
+
+
+
+            
+
+/*IL_JOB_STARTS*/
+
+!(function () {
+	//avoid message trigger twice for pnp accounts
+	if (window.IL_MessageTriggered) return;
+	var adpushup = window.adpushup || {};
+	adpushup.que = adpushup.que || [];
+	adpushup.que.push(function () {
+		var w = window;
+		var ap = adpushup;
+		var EU_COUNTRY_LIST = ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','GB','GF','GP','MQ','ME','YT','RE','MF','GI','AX','PM','GL','BL','SX','AW','CW','WF','PF','NC','TF','AI','BM','IO','VG','KY','FK','MS','PN','SH','GS','TC','AD','LI','MC','SM','VA','JE','GG','GI'];
+		if (EU_COUNTRY_LIST.includes(ap.config.country)) return;
+		var utils = ap.utils;
+		utils.log('Impression Logging (IL) started.');
+		var impressionLoggingKey = 'IL_';
+		var iframeFound = false;
+		var dataEventName = 'data';
+		var errorEventName = 'error';
+		var cdnorigin_domain = 'https://cdn.adpushup.com';
+		var adpushup_client = 'https://client.adpushup.com';
+		var logging_endpoint = 'https://aplogger.adpushup.com/log';
+		var message = {
+			origin: adpushup_client,
+			userId: ap.config.packetId
+		};
+		function generateUniqueId() {
+			return (
+				'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+					var r = (Math.random() * 16) | 0,
+						v = c == 'x' ? r : (r & 0x3) | 0x8;
+					return v.toString(16);
+				}) +
+				'-' +
+				new Date().valueOf()
+			);
+		}
+		function isParsableJson(str) {
+			try {
+				JSON.parse(str);
+			} catch (e) {
+				return false;
+			}
+			return true;
+		}
+		function triggerRequest(eventName, data) {
+			if (isParsableJson(data)) {
+				var stringJson = data;
+			} else {
+				var stringJson = JSON.stringify(data);
+				//stringifying the error object returns empty object
+				//https://stackoverflow.com/questions/18391212/is-it-not-possible-to-stringify-an-error-using-json-stringify
+				if (stringJson === '{}')
+					stringJson = JSON.stringify(data, Object.getOwnPropertyNames(data));
+			}
+			var encodedStringJson = btoa(stringJson);
+			var pixel = document.createElement('img');
+			pixel.src =
+				logging_endpoint +
+				'?event=' +
+				impressionLoggingKey +
+				eventName +
+				'&data=' +
+				encodedStringJson;
+			utils.log('IL request triggered.' + stringJson);
+		}
+		function checkIframe() {
+			if (w.IL_MessageTriggered) return;
+			utils.log('IL checking if Iframe already exists.');
+			var iframes = document.getElementsByTagName('iframe');
+			for (var i = 0; i < iframes.length; i++) {
+				var ifm = iframes[i];
+				if (ifm.src.includes(cdnorigin_domain)) {
+					var iframe = ifm;
+					iframeFound = true;
+					break;
+				}
+			}
+			if (!iframeFound) return;
+			triggerMessage(iframe);
+		}
+		function createIframe() {
+			utils.log('IL iframe not found. Creating new iframe.');
+			return new Promise(function (resolve, reject) {
+				var ifm = document.createElement('iframe');
+				ifm.src = cdnorigin_domain + '/02/IL_.html';
+				ifm.style.cssText = 'display:none; width:0; height:0;';
+				ifm.onload = function () {
+					resolve(ifm);
+				};
+				ifm.onerror = function () {
+					reject();
+				};
+				(document.body || document.head).appendChild(ifm);
+			});
+		}
+		function generateImpressionLoggingJson(trackerObj) {
+			var uniqueId = generateUniqueId();
+			var adpushup = window.adpushup || {};
+
+			var obj = {
+				country: ap.config.country,
+				date: Date.now(),
+				domain: w.location.hostname,
+				pathname: w.location.pathname,
+				platform: ap.config.platform,
+				siteId: ap.config.siteId,
+				uniqueId: uniqueId,
+				activeEvents: adpushup.activeEvents || "",
+				runningEvents: adpushup.runningEvents || ""
+			};
+			trackerObj = Object.assign(trackerObj, obj);
+			return trackerObj;
+		}
+		function attachListeners() {
+			w.addEventListener('message', function (e) {
+				var origin = cdnorigin_domain;
+				if (e.origin !== origin) return;
+				if (!isParsableJson(e.data)) return;
+				var trackerObj = JSON.parse(e.data);
+				if (!trackerObj) return;
+				if (!trackerObj.userId) trackerObj.userId = ap.config.packetId;
+				utils.log('IL message received from iframe.');
+				if (!!trackerObj['origin']) delete trackerObj['origin'];
+				trackerObj = generateImpressionLoggingJson(trackerObj);
+				triggerRequest(dataEventName, trackerObj);
+			});
+		}
+		function triggerMessage(ifm) {
+			if (w.IL_MessageTriggered) return;
+			w.IL_MessageTriggered = true;
+			utils.log('IL message sent to iframe.');
+			ifm.contentWindow.postMessage(JSON.stringify(message), cdnorigin_domain);
+		}
+		try {
+			attachListeners();
+			checkIframe();
+			if (w.IL_MessageTriggered) return;
+			createIframe()
+				.then(function (ifm) {
+					utils.log('IL iframe created.');
+					triggerMessage(ifm);
+				})
+				.catch(function (error) {
+					if (error === undefined)
+						error = {
+							message:
+								'Custom error message. Error in createIframe(), could be because of promise rejection'
+						};
+					utils.log('IL error in iframe creation.' + error);
+					triggerRequest(errorEventName, error);
+				});
+		} catch (error) {
+			utils.log('IL error in execution.' + error);
+			triggerRequest(errorEventName, error);
+		}
+	});
+})();
+
+/*IL_JOB_ENDS*/
+
+        </script><script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async=""></script><script async="" src="https://c.amazon-adsystem.com/aax2/apstag.js"></script><script type="text/javascript">(function($){ 
+ var $els = $('div[id^="STICKY"]');
+    $els.each(function(i,$el){
+        var span = $('<span style="cursor:pointer; position: absolute; top: -20px; right: 0; background: rgba(255,255,255,0.3); color: #000; padding: 0 5px;"> Close</span>');
+        $($el).append(span);
+        span.on('click',function(){
+            $(this).parents('.adp_interactive_ad').remove();
+        })
+    })
+ })(adpushup.$)</script><script type="text/javascript">(function($){ 
+
+ })(adpushup.$)</script></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<header id="header" class="fixed">
+<!-- pop-up -->
+<div class="pop-modal overlay-pop popdiv" style="display: none;">
+<div class="modal-window small">
+<span class="close" title="close">×</span>
+<div class="pop-content">
+</div>
+<span class="msg"></span>
+</div>
+</div>
+<div class="wrap_loader">
+<div class="imgLoader"><img src="./How to automatically redirect a Web Page to another URL__files/loader.gif" alt="Tutorialspoint" width="70" height="70"></div>
+</div>
+<input type="hidden" id="vu" name="vu" value="">
+<!-- pop-up -->
+
+<!-- Top sub-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid top-menu">
+<div class="mui-container">
+<div class="top-menu-item home">
+<a href="https://www.tutorialspoint.com/index.htm" target="_blank" title="TutorialsPoint - Home"><i class="fal fa-home"></i> <span>Home</span></a>
+</div>
+<div class="top-menu-item qa">
+<a href="https://www.tutorialspoint.com/about/about_careers.htm" target="_blank" title="Job @ Tutorials Point"><i class="fa fa-suitcase"></i> <span>Jobs</span></a>
+</div>
+<div class="top-menu-item tools">
+<a href="https://www.tutorialspoint.com/online_dev_tools.htm" target="_blank" title="Tools - Online Development and Testing Tools"><i class="fal fa-cogs"></i> <span>Tools</span></a>
+</div>
+<div class="top-menu-item coding-ground">
+<a href="https://www.tutorialspoint.com/codingground.htm" target="_blank" title="Coding Ground - Free Online IDE and Terminal"><i class="fal fa-code"></i> <span>Coding Ground </span></a> 
+</div>
+<div class="top-menu-item current-affairs">
+<a href="https://www.tutorialspoint.com/current_affairs.htm" target="_blank" title="Daily Current Affairs"><i class="fal fa-layer-plus"></i> <span>Current Affairs</span></a>
+</div>
+<div class="top-menu-item upsc-notes">
+<a href="https://www.tutorialspoint.com/upsc_ias_exams.htm" target="_blank" title="UPSC IAS Exams Notes - TutorialsPoint"><i class="fal fa-user-tie"></i> <span>UPSC Notes</span></a>
+</div>      
+<div class="top-menu-item articles">
+<a href="https://www.tutorialspoint.com/tutor_connect/index.php" target="_blank" title="Top Online Tutors - Tutor Connect"><i class="fal fa-user"></i> <span>Online Tutors</span></a>
+</div>
+<div class="top-menu-item whiteboard">
+<a href="https://www.tutorialspoint.com/whiteboard.htm" target="_blank" title="Free Online Whiteboard"><i class="fal fa-chalkboard"></i> <span>Whiteboard</span></a>
+</div>
+<div class="top-menu-item net-meeting">
+<a href="https://www.tutorialspoint.com/netmeeting.php" target="_blank" title="A free tool for online video conferencing"><i class="fal fa-chalkboard-teacher"></i> <span>Net Meeting</span></a> 
+</div>
+<div class="top-menu-item articles">
+<a href="https://www.tutorix.com/" target="_blank" title="Tutorx - The Best Learning App" rel="nofollow"><i class="fal fa-video"></i> <span>Tutorix</span></a> 
+</div>        
+<div class="social-menu-item">
+<a href="https://www.facebook.com/tutorialspointindia" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Facebook"><i class="fab fa-facebook-f"></i></a> 
+<a href="https://www.twitter.com/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Twitter"><i class="fab fa-twitter"></i></a>
+<a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Linkedin"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint YouTube"><i class="fab fa-youtube"></i></a>
+</div>        
+</div>
+</div>
+<!-- Top sub-menu Ends Here -->
+<!-- Top main-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1 sticky" id="logo-menu">
+<div class="mui-container">
+<div class="left-menu">
+<a href="https://www.tutorialspoint.com/index.htm" title="Tutorialspoint">
+<img class="tp-logo" alt="tutorialspoint" src="./How to automatically redirect a Web Page to another URL__files/logo.png">
+</a>
+<div class="mui-dropdown">
+<a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown"><i class="fa fa-th-large"></i> 
+<span>Categories <span class="mui-caret"></span></span></a>            
+<ul class="mui-dropdown__menu cat-menu">
+<li>
+<ul>
+<li><a href="https://www.tutorialspoint.com/questions/category/java8"><i class="fa fa-caret-right"></i> Java</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/jsp"><i class="fa fa-caret-right"></i> JSP</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/ios"><i class="fa fa-caret-right"></i> iOS</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/html"><i class="fa fa-caret-right"></i> HTML</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/android"><i class="fa fa-caret-right"></i> Android</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/python"><i class="fa fa-caret-right"></i> Python</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/c"><i class="fa fa-caret-right"></i> C Programming</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/cplusplus"><i class="fa fa-caret-right"></i> C++ Programming</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/csharp"><i class="fa fa-caret-right"></i> C#</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/php"><i class="fa fa-caret-right"></i> PHP</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/css"><i class="fa fa-caret-right"></i> CSS</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/javascript"><i class="fa fa-caret-right"></i> Javascript</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/jquery"><i class="fa fa-caret-right"></i> jQuery</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/sap"><i class="fa fa-caret-right"></i> SAP</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/sap-hana"><i class="fa fa-caret-right"></i> SAP HANA</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/data-structure"><i class="fa fa-caret-right"></i> Data Structure</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/rdbms"><i class="fa fa-caret-right"></i> RDBMS</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/mysql"><i class="fa fa-caret-right"></i> MySQL</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/mathematics"><i class="fa fa-caret-right"></i> Mathematics</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/8085"><i class="fa fa-caret-right"></i> 8085 Microprocessor</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/operating-system"><i class="fa fa-caret-right"></i> Operating System</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/digital-electronics"><i class="fa fa-caret-right"></i> Digital Electronics</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/analysis-of-algorithms"><i class="fa fa-caret-right"></i> Analysis of Algorithms</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/mobile-development"><i class="fa fa-caret-right"></i> Mobile Development</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/front-end-technology"><i class="fa fa-caret-right"></i> Front End </a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/web-development"><i class="fa fa-caret-right"></i> Web Development</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/selenium"><i class="fa fa-caret-right"></i> Selenium</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/mongodb"><i class="fa fa-caret-right"></i> MongoDB</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/computer-network"><i class="fa fa-caret-right"></i> Computer Network</a></li>
+<li><a href="https://www.tutorialspoint.com/questions/category/general-topics"><i class="fa fa-caret-right"></i> General Topics</a></li>
+</ul>
+</li>
+</ul>
+<div class="clear"></div>
+</div> 
+</div>
+<div class="right-menu">
+<div class="toc-toggle">
+<a href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+</div>
+<div class="mobile-search-btn">
+<a href="https://www.tutorialspoint.com/index.htm"><i class="fal fa-search"></i></a>
+</div>
+<div class="search-box">
+<script async="" src="./How to automatically redirect a Web Page to another URL__files/f.txt"></script>
+<div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id1" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: -0.0625em 0px 0px; height: 1.25em; background: url(&quot;https://www.google.com/cse/static/images/1x/en/branding.png&quot;) left center no-repeat rgb(255, 255, 255); outline: none;"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" title="Clear search box" role="button" style="display: none;"><span class="gscb_a" id="gs_cb50" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form><div class="gsc-results-wrapper-overlay"><div class="gsc-results-close-btn" tabindex="0"></div><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"><div aria-label="refinement" role="tab" class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div></div><div class="gsc-positioningWrapper"><div class="gsc-tabsAreaInvisible"></div></div><div class="gsc-above-wrapper-area-invisible"><table cellspacing="0" cellpadding="0" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Sort by:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><div><div class="gsc-expansionArea"></div></div></div></div></div></div><div class="gsc-modal-background-image" tabindex="0"></div></div></div></div>
+</div>
+<div class="menu-btn library-btn">
+<a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a>
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/courses"><i class="fal fa-video"></i> <span>Videos</span></a> 
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/questions/index.php"><i class="fa fa-location-arrow"></i> <span>Q/A</span></a>
+</div>
+<div class="menu-btn ebooks-btn">
+<a href="https://store.tutorialspoint.com/"><i class="fal fa-book"></i> <span>eBooks</span></a>
+</div>
+<div class="mui-dropdown">
+<button class="mui-btn mui-btn--primary mobile-menu" data-mui-toggle="dropdown" type="button">
+<span class="mui-caret"></span>
+</button>
+<ul class="mui-dropdown__menu">
+<li><a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a></li>
+<li><a href="https://www.tutorialspoint.com/courses"><i class="fal fa-video"></i> <span>Videos</span></a></li>
+<li><a href="https://www.tutorialspoint.com/ebooks"><i class="fal fa-book"></i> <span>eBooks</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Top main-menu Ends Here -->
+</header>
+<script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
+"HTML-CSS": {
+  linebreaks: { automatic: true, width: "container" }          
+}              
+});
+</script>
+<script src="./How to automatically redirect a Web Page to another URL__files/MathJax.js" id=""> </script>
+
+<link rel="stylesheet" href="./How to automatically redirect a Web Page to another URL__files/prettify.css">
+<style>img.fr-dib, img.fr-fic{width:auto!important; width:-webkit-fill-available; max-width:100%;}
+.tutorial-content .math{border:0px solid #d6d6d6!important; margin-bottom:0px!important; padding:0px!important; background:transparent!important;}
+pre.prettyprint{border:1px solid #ccc!important; background-color:#f1f1f1; border-radius:0; padding:5px!important; margin:0; margin-bottom:10px; margin-top:15px; font-size:13px; overflow:auto;}
+pre.result{border:1px solid #ccc; background-color:#eee; padding:5px; margin:0; margin-bottom:0; font-size:12px; overflow:auto;}
+pre.result, pre.prettyprint{border:1px solid #dedede; background-color:#f7f7f7; border-radius:0;}
+.prettyprint{background:#eee!important; border:1px solid #d6d6d6 !important;}
+pre.prettyprint{padding:5px; font-size:.95em; overflow-x:auto;}
+.result{background:#eee!important; border:1px solid #d6d6d6 !important;}
+pre.result{padding:5px; font-size:.95em; overflow-x:auto;}
+.tutorial-content table{margin-left:0px!important;}
+</style>
+<div class="mui-container-fluid content"> 
+<div class="mui-container">
+<!-- Tutorial ToC Starts Here -->
+<div class="mui-col-md-3 tutorial-toc">
+<div class="mini-logo">
+<img style="width:162px;" src="./How to automatically redirect a Web Page to another URL__files/QAicon.png" alt="Technical Questions and Answers">
+</div>
+<ul class="toc chapters">
+<li class="heading big-font"><i class="fa fa-th-large"></i> Related Questions &amp; Answers</li>
+<li><a href="https://www.tutorialspoint.com/How-to-automatically-redirect-your-visitors-to-your-new-home-page">How to automatically redirect your visitors to your new home page?</a></li>
+<li><a href="https://www.tutorialspoint.com/How-do-I-redirect-my-web-page-with-JavaScript">How do I redirect my web page with JavaScript?</a></li>
+<li><a href="https://www.tutorialspoint.com/javascript-redirect-a-url">JavaScript - Redirect a URL</a></li>
+<li><a href="https://www.tutorialspoint.com/How-to-use-window-location-to-redirect-to-a-different-URL">How to use window.location to redirect to a different URL?</a></li>
+<li><a href="https://www.tutorialspoint.com/How-to-make-a-page-redirect-using-jQuery">How to make a page redirect using jQuery?</a></li>
+<li><a href="https://www.tutorialspoint.com/How-to-redirect-a-URL-using-Python-CGI-script">How to redirect a URL using  Python CGI script?</a></li>
+<li><a href="https://www.tutorialspoint.com/How-to-redirect-from-an-HTML-page">How to redirect from an HTML page?</a></li>
+<li><a href="https://www.tutorialspoint.com/How-to-use-window-location-to-redirect-to-a-different-URL-with-JavaScript">How to use window.location to redirect to a different URL with JavaScript?</a></li>
+<li><a href="https://www.tutorialspoint.com/How-to-redirect-to-another-webpage-using-jQuery">How to redirect to another webpage using jQuery?</a></li>
+<li><a href="https://www.tutorialspoint.com/How-to-redirect-to-another-webpage-using-JavaScript">How to redirect to another webpage using JavaScript?</a></li>
+<li><a href="https://www.tutorialspoint.com/how-to-redirect-to-another-webpage-with-javascript">How to redirect to another webpage with JavaScript?</a></li>
+<li><a href="https://www.tutorialspoint.com/How-to-use-JavaScript-to-redirect-an-HTML-page">How to use JavaScript to redirect an HTML page?</a></li>
+<li><a href="https://www.tutorialspoint.com/How-to-use-Meta-Tag-to-redirect-an-HTML-page">How to use Meta Tag to redirect an HTML page?</a></li>
+<li><a href="https://www.tutorialspoint.com/How-to-redirect-URL-to-the-different-website-after-few-seconds">How to redirect URL to the different website after few seconds?</a></li>
+<li><a href="https://www.tutorialspoint.com/smart-ways-to-save-a-web-page-forever">Smart Ways to Save a Web Page Forever!!</a></li>
+</ul><ul class="toc reading">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="https://www.tutorialspoint.com/upsc_ias_exams.htm">UPSC IAS Exams Notes</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+<div id="stickyparent" style="position: sticky;">
+<div style="height:250px;width:300px;" id="sticky-ad">
+<div id="00000001-3157d782-87bf-4fbd-8577-3427d32c0180" class="_ap_apex_ad" data-section="00000001-3157d782-87bf-4fbd-8577-3427d32c0180" data-orig-id="430c9911-782f-495d-88f9-69f58ca8c9a4" data-render-time="1627256426443" data-ap-network="adpTags" style="text-align: center; margin: 10px auto; width: 300px; height: 250px; overflow: hidden; display: block;" data-refresh-time="1627256426444" data-timeout="33">
+<script>
+var adpushup = adpushup || {};
+adpushup.que = adpushup.que || [];
+adpushup.que.push(function() {
+adpushup.triggerAd("430c9911-782f-495d-88f9-69f58ca8c9a4");
+});
+</script>
+<div id="ADP_40046_300x250_00000001-3157d782-87bf-4fbd-8577-3427d32c0180" style="text-align: center; margin: 0 auto;">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_40046_300x250_00000001-3157d782-87bf-4fbd-8577-3427d32c0180");
+});
+</script>
+</div></div>
+</div>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="mui-col-md-6 tutorial-content" style="min-height: 1880px;">
+<h1 class="qa_title">How to automatically redirect a Web Page to another URL?</h1>
+<div class="qa_category">
+<a href="https://www.tutorialspoint.com/questions/category/HTML" target="_blank"><span>HTML</span></a><a href="https://www.tutorialspoint.com/questions/category/Web-Development" target="_blank"><span>Web Development</span></a><a href="https://www.tutorialspoint.com/questions/category/Front-End-Technology" target="_blank"><span>Front End Technology</span></a><hr>
+<div id="adp_top_ads" style="text-align:center !important;"><div id="00000001-3e83bc98-a7c9-4e92-9ffc-3d681af9b66b" class="_ap_apex_ad" data-section="00000001-3e83bc98-a7c9-4e92-9ffc-3d681af9b66b" data-orig-id="8014640d-fd34-4b2e-9b1b-cc67234a2325" data-render-time="1627256426445" data-ap-network="adpTags" style="text-align: center; margin: 10px auto; width: 728px; height: 90px; overflow: hidden; display: block;" data-refresh-time="1627256426445" data-timeout="35"><div id="ADP_40046_728x90_00000001-3e83bc98-a7c9-4e92-9ffc-3d681af9b66b" style="text-align: center; margin: 0 auto;">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_40046_728x90_00000001-3e83bc98-a7c9-4e92-9ffc-3d681af9b66b");
+});
+</script>
+</div></div></div>
+<script>
+     var adPos = document.getElementById('adp_top_ads');
+     var ad_id_720 = "8014640d-fd34-4b2e-9b1b-cc67234a2325";
+     var ad_id_650 = "2d1bb2c4-eb72-471d-9c80-1bf5514728c1";
+     var ad_id_300 = "df94a1a9-ae2f-432d-9a92-d93823ff4503";
+     var width = window.innerWidth;
+     var ad_id = ad_id_720;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+     var adpushup = adpushup || {};
+     adpushup.que = adpushup.que || [];
+     adpushup.que.push(function() {
+     adpushup.triggerAd(ad_id);
+     });
+</script>
+</div>
+<hr>
+<p style="">Page redirection is a situation where you clicked a URL to reach a page X but internally you were directed to another page Y. It happens due to page redirection.</p><p style="">To redirect from an HTML page, use the META Tag. With this, use the http-equiv attribute to provide an HTTP header for the value of the content attribute. The value of the content is the number of seconds; you want the page to redirect after.</p><p style="">Set the content attribute to 0, if you want the page to load the new URL immediately.</p><p><img src="./How to automatically redirect a Web Page to another URL__files/168383-1516877025.jpg" class="fr-fic fr-dii" width="500" height="268"></p><h2>Example</h2><p style="">The following is an example of redirecting current page to another website after 3 seconds.</p><p><a href="http://tpcg.io/XJ1Keo" rel="nofollow noopener noreferrer" target="_blank">Live Demo</a></p><pre class="prettyprint notranslate prettyprinted" style=""><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+</span><span class="tag">&lt;html&gt;</span><span class="pln">
+&nbsp; &nbsp;</span><span class="tag">&lt;head&gt;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;title&gt;</span><span class="pln">HTML Meta Tag</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">http-equiv</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"refresh"</span><span class="pln"> </span><span class="atn">content</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"3; url = https://www.qries.com"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+&nbsp; &nbsp;</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+&nbsp; &nbsp;</span><span class="tag">&lt;body&gt;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;p&gt;</span><span class="pln">Redirecting to another URL</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+&nbsp; &nbsp;</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre><div class="clear"></div>
+<div class="mui-panel profile-panel">
+<a href="https://www.tutorialspoint.com/answers/arushi" target="_blank" title="raja" class="mui--pull-left">
+<img class="profile" src="./How to automatically redirect a Web Page to another URL__files/60_55588-1512537391.jpg" alt="raja">
+</a>  
+<div class="qa_author">
+<a href="https://www.tutorialspoint.com/answers/arushi" target="_blank"><span>Arushi</span></a> 
+</div> 	
+<div class="qa_answer_dtm">
+Published on 07-Feb-2018 09:34:03</div>
+<div class="author-caret">
+<a href="https://www.tutorialspoint.com/answers/arushi" target="_blank">
+<i class="fal fa-chevron-circle-right"></i>
+</a>
+</div>					
+</div>   
+<div class="mui-container-fluid button-borders show">
+<div class="pre-btn">
+<a href="https://www.tutorialspoint.com/questions/index.php"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+</div>
+<div class="nxt-btn">
+<a href="https://www.tutorialspoint.com/How-to-use-JavaScript-to-redirect-an-HTML-page">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="google-bottom-ads" id="google-bottom-ads">
+<div>Advertisements</div>
+<div>
+<div id="adp_bottom_ads"><div id="00000001-d45c6a54-8727-47cf-8390-115886b76889" class="_ap_apex_ad" data-section="00000001-d45c6a54-8727-47cf-8390-115886b76889" data-orig-id="e7ddd6f7-1ab0-494a-bade-887daa4373a0" data-render-time="1627256426446" data-ap-network="adpTags" style="text-align: center; margin: 10px auto; width: 580px; height: 400px; overflow: hidden; display: block;" data-refresh-time="1627256426446" data-timeout="37"><div id="ADP_40046_580x400_00000001-d45c6a54-8727-47cf-8390-115886b76889" style="text-align: center; margin: 0 auto;">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_40046_580x400_00000001-d45c6a54-8727-47cf-8390-115886b76889");
+});
+</script>
+</div></div></div>
+<script>
+var adPos = document.getElementById('adp_bottom_ads');
+var mobile_ad_id = "a8a632a6-046e-4f5c-b25f-8bc82ac89fb2";
+var desktop_ad_id = "e7ddd6f7-1ab0-494a-bade-887daa4373a0";
+var adpushup = adpushup || {};
+adpushup.que = adpushup.que || [];
+adpushup.que.push(function() {
+var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+adPos.innerHTML = '<div id="' + ad_id + '" class="_ap_apex_ad"></div>';
+adpushup.triggerAd(ad_id);
+});
+</script>
+</div>
+<div class="space-bottom"></div>
+</div>
+</div>
+<!-- Tutorial Content Ends Here -->
+<div class="mui-col-md-2 google-right-ads" id="chapter-menu" style="display: none;">
+<input type="hidden" id="vu" name="vu" value="">
+<div class="space-top"></div>
+<div class="mui-panel">
+<ul class="paid-menu" id="div-right-menu">
+<li><a class="hide-on-mobile" href="javascript:printPage();" title="Print this page"><i class="fa fa-print"></i> Print</a></li>
+<li><a href="javascript:void(0)" class="add_notes" title="Add Custom Notes" onclick="add_notes();"><i class="fa fa-edit"></i>&nbsp;Add Notes</a></li>
+<li><a href="javascript:void(0)" class="clsPage text-bookmark" id="text-bookmark" title="Add Bookmark" onclick="text_bookmark()"><i class="fal fa-bookmark"></i>&nbsp;Bookmark this page </a></li>
+<li><a href="javascript:void(0);" id="report_error_popup" onclick="report_error_popup();" title="Report Error"><i class="fal fa-bell"></i>&nbsp;Report Error</a></li>
+<li><a href="javascript:void(0);" id="suggestion_popup" title="Give Suggestions" onclick="suggestion_popup();"><i class="fal fa-badge-check"></i>&nbsp;Suggestions</a></li>
+</ul>
+<div class="profile-my-notes" id="text_notes_div" style="display:none;">
+<textarea rows="10" class="text_notes" id="text_notes" name="text_notes" placeholder="Enter your custom notes..."></textarea>
+<br>
+<a href="javascript:void(0);" id="submit_text_notes" class="butn-save" onclick="submit_text_notes();"> Save</a>
+<a href="javascript:void(0);" class="pop-no butn-cancel" onclick="notesClose();"> Close</a>
+<p class="notes_msg"></p>
+</div>
+<div class="bottom-menu">
+<button class="tp-btn"><i class="fal fa-box-up"></i> <a href="https://www.tutorialspoint.com/videotutorials/dashboard.php">Dashboard</a></button>
+<button class="tp-btn"><i class="fal fa-sign-out-alt"></i> <a href="https://www.tutorialspoint.com/videotutorials/userlogout.php">Logout</a></button>
+</div>
+</div>
+</div>
+<div class="mui-col-md-2 google-right-ads" id="google-right-ads">
+<div class="space-top"></div>
+<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;min-height:250px!important">
+<div id="00000001-c3c1cbf0-2ba7-4158-a398-9e819d63f5c8" class="_ap_apex_ad" data-section="00000001-c3c1cbf0-2ba7-4158-a398-9e819d63f5c8" data-orig-id="f0f6cff6-393d-4170-b63a-d9ff06ca9f25" data-render-time="1627256426447" data-ap-network="adpTags" style="text-align: center; margin: 10px auto; width: 300px; height: 250px; overflow: hidden; display: block;" data-refresh-time="1627256426447" data-timeout="39">
+<script>
+var adpushup = adpushup || {};
+adpushup.que = adpushup.que || [];
+adpushup.que.push(function() {
+adpushup.triggerAd("f0f6cff6-393d-4170-b63a-d9ff06ca9f25");
+});
+</script>
+<div id="ADP_40046_300x250_00000001-c3c1cbf0-2ba7-4158-a398-9e819d63f5c8" style="text-align: center; margin: 0 auto;">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_40046_300x250_00000001-c3c1cbf0-2ba7-4158-a398-9e819d63f5c8");
+});
+</script>
+</div></div>
+</div>
+<div class="google-right-ad" style="margin-top:16px;min-height:250px!important">
+<div id="00000001-388a4ac7-5374-46f8-a2cc-e2f93e43ab01" class="_ap_apex_ad" data-section="00000001-388a4ac7-5374-46f8-a2cc-e2f93e43ab01" data-orig-id="5c0affd5-724a-475c-bfcd-cecbc7660c36" data-render-time="1627256426447" data-ap-network="adpTags" style="text-align: center; margin: 10px auto; width: 300px; height: 250px; overflow: hidden; display: block;" data-refresh-time="1627256426447" data-timeout="41">
+<script>
+var adpushup = adpushup || {};
+adpushup.que = adpushup.que || [];
+adpushup.que.push(function() {
+adpushup.triggerAd("5c0affd5-724a-475c-bfcd-cecbc7660c36");
+});
+</script>
+<div id="ADP_40046_300x250_00000001-388a4ac7-5374-46f8-a2cc-e2f93e43ab01" style="text-align: center; margin: 0 auto;">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_40046_300x250_00000001-388a4ac7-5374-46f8-a2cc-e2f93e43ab01");
+});
+</script>
+</div></div>
+</div>
+<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;min-height:600px!important">
+<div id="00000001-7eca4f61-4779-4135-bbda-df13f7cd8330" class="_ap_apex_ad" data-section="00000001-7eca4f61-4779-4135-bbda-df13f7cd8330" data-orig-id="8f8814c2-d64c-4d26-9cb9-543653c0b48f" data-render-time="1627256426448" data-ap-network="adpTags" style="text-align: center; margin: 10px auto; width: 300px; height: 600px; overflow: hidden; display: block;" data-refresh-time="1627256426448" data-timeout="43">
+<script>
+var adpushup = adpushup || {};
+adpushup.que = adpushup.que || [];
+adpushup.que.push(function() {
+adpushup.triggerAd("8f8814c2-d64c-4d26-9cb9-543653c0b48f");
+});
+</script>
+<div id="ADP_40046_300x600_00000001-7eca4f61-4779-4135-bbda-df13f7cd8330" style="text-align: center; margin: 0 auto;">
+<script type="text/javascript">
+window.adpushup.adpTags.que.push(function(){
+window.adpushup.adpTags.display("ADP_40046_300x600_00000001-7eca4f61-4779-4135-bbda-df13f7cd8330");
+});
+</script>
+</div></div>
+</div>
+<div class="space-bottom" style="margin-bottom:15px;"></div>
+</div>
+<!-- Right Column Ends Here -->
+</div>
+</div>
+<div class="clear"></div>
+<footer id="footer">
+<div class="mui--text-center">
+<div class="mui--text-caption mui--text-light">
+<a href="https://www.tutorialspoint.com/index.htm" class="logo"><img class="img-responsive" src="./How to automatically redirect a Web Page to another URL__files/logo-black.png" alt="Tutorials Point" title="Tutorials Point"></a>
+</div>
+<ul class="mui-list--inline mui--text-body2 mui--text-light">
+<li><a href="https://www.tutorialspoint.com/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_privacy.htm#cookies"> <i class="fal fa-shield-check"></i> Cookies Policy</a></li>
+<li><a href="https://www.tutorialspoint.com/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+<li><a href="https://www.tutorialspoint.com/about/about_helping.htm"><i class="fal fa-hands-helping"></i> Helping</a></li>
+<li><a href="https://www.tutorialspoint.com/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+</ul>
+<div class="mui--text-caption mui--text-light bottom-copyright-text">© Copyright 2021. All Rights Reserved.</div>
+</div>
+<script async="" src="./How to automatically redirect a Web Page to another URL__files/js"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-232293-17');
+</script>
+<script src="./How to automatically redirect a Web Page to another URL__files/text_menu.js"></script>
+<script>
+function readCookie(name) {
+     var nameEQ = name + "=";
+     var ca = document.cookie.split(';');
+     for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+     }
+     return null;
+}
+$(document).ready(function (){
+    var cval = readCookie('subscription_purchased');
+    if(cval == '1'){
+          // logged in and purchased subscription.
+          $('#google-right-ads').remove();
+          $('#adp1').remove();
+          $('#adp2').remove();
+          $('#stickyparent').remove();
+          $('#google-top-ads').remove();
+          $('#adp_top_ads').remove();
+          $('#google-bottom-ads').remove();
+          $('.tutorial-content hr').remove();
+          $('.login').remove();
+          $('#chapter-menu').show();
+          $('.content h1').css("border-bottom", "none");
+          $('.google-right-ads').css("padding-right", "0px");
+          $('.tutorial-content').css("border-radius", "10px");
+          $('#chapter-menu .mui-panel').css("border-radius", "10px");
+     }
+});
+</script>
+</footer>
+
+
+<table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 214px; display: none; top: 93px; position: absolute; left: 1091px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><iframe src="./How to automatically redirect a Web Page to another URL__files/IL_.html" style="display: none; width: 0px; height: 0px;"></iframe></body><iframe sandbox="allow-scripts allow-same-origin" id="1870ff3a63e2e66" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./How to automatically redirect a Web Page to another URL__files/usersync.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="18862230b8df519" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./How to automatically redirect a Web Page to another URL__files/2000970.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="189d4dc5572199c6" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./How to automatically redirect a Web Page to another URL__files/sync(1).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="190c89fe0fcc1ca9" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./How to automatically redirect a Web Page to another URL__files/ixmatch.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="191c51d0bb2bd605" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./How to automatically redirect a Web Page to another URL__files/saved_resource(3).html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="192132ab63d50b7" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./How to automatically redirect a Web Page to another URL__files/async_usersync.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1933243cfc8e832b" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./How to automatically redirect a Web Page to another URL__files/usync.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="194a52f41088c508" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./How to automatically redirect a Web Page to another URL__files/pd.html">
+    </iframe><iframe sandbox="allow-scripts allow-same-origin" id="1954f7b4bb02f1dd" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./How to automatically redirect a Web Page to another URL__files/user_sync(1).html">
+    </iframe></html>
