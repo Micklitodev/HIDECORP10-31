@@ -281,6 +281,7 @@ init = function() {
   window.addEventListener('pointermove', mouseMove);
   
   blob.canvas = canvas;
+  
   blob.init();
   blob.render();
 }

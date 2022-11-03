@@ -21,7 +21,7 @@ let valueEcom = 99;
           if (value1 === "five" && value2 === "no") {
                var result = 499
             }
-
+ 
 
                              if (value1 === "one" && value2 === "yes") {
                                  var result = (99 + valueEcom)
