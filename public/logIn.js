@@ -1,25 +1,26 @@
 
 const pullFromEndpoint =  'https://signuphide-default-rtdb.firebaseio.com/.json' 
 
-const dbObject = {
-  username: '',
-  password: ''
-}
+let dbObject = {
 
+}
 
 
 async function getCreds () {
 const logInUser = document.getElementById('logInUser').value
 const logInPass = document.getElementById('logInPass').value
-console.log(logInUser)
-console.log(logInPass)
+
 
 await fetch(pullFromEndpoint) 
 .then(function(response)
+
 {
    response.json().then(function(data) {
-   let val = Object.values(data) 
-   console.log(val) 
+   dbObject = data
+   let shelledObject = (Object.values(dbObject))
+    // ++ or foreach 
+   for(i = 0; i < shelledObject.length; i++ ){
+   let val = Object.values(shelledObject[i])
    if (val[1] === logInUser && val[0] === logInPass) {
     return document.write(
         `<!DOCTYPE html>
@@ -35,10 +36,10 @@ await fetch(pullFromEndpoint)
         <body> 
         <script src="navbar.js"></script>
         <script> Navbarpasstohtml() </script>
-              <h1 class="docwrite"> we fucking did it biotch!
+              <h1 class="docwrite"> home
               </h1> 
               </body>
-            <div class="Paymentbtn"> <a href="payment.html">
+            <div class="Paymentbtn"> <a href="index.html">
               <input type="button" value="Continue" />
             </a>
             </div>
@@ -47,10 +48,10 @@ await fetch(pullFromEndpoint)
             <footer class="footer">Email: Micklito.dev@gmail.com | Phone: 470-831-4159 | <a href="contactus.html">
           <input type="button" value="Contact Us" />
         </a> </footer>`)
-}
+}}
     }); 
 }).catch(function(error) {
     console.log('Fetch Error:', error);
 });  
-}
+};
 
