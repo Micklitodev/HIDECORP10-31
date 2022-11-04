@@ -5,23 +5,14 @@ const getRandomInt=()=> {
   } 
 
 let randInt1 = getRandomInt()
+let randInt2 = getRandomInt()
+let randInt3 = getRandomInt()
 
-const getRandomInt2=()=> {
-    return Math.floor(Math.random() * 999);
-  } 
-
-let randInt2 = getRandomInt2()
-
-const getRandomInt3=()=> {
-    return Math.floor(Math.random() * 999);
-  } 
-
-let randInt3 = getRandomInt3()
 
 let userKey = [`${randInt1}-${randInt2}-${randInt3}`]
 
 
-
+console.log(userKey)
 
 const updateEndpoint = 'https://signuphide-default-rtdb.firebaseio.com/.json';
 
@@ -39,4 +30,4 @@ let passwordInfo = document.getElementById('password').value
             password: passwordInfo
     })
     });
-}; 
+};    

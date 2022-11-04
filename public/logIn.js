@@ -1,21 +1,22 @@
 
 const pullFromEndpoint =  'https://signuphide-default-rtdb.firebaseio.com/.json' 
 
-
+const dbObject = {
+  username: '',
+  password: ''
+}
 
 const getCreds = () => {
-// const logInUser = document.getElementById('logInUser')
-// const logInPass = document.getElementById('logInPass')
-const logInUser = 'michaelvrms@gmail.com'
-const logInPass = 'TEST'
+const logInUser = document.getElementById('logInUser')
+const logInPass = document.getElementById('logInPass')
+
 
 fetch(pullFromEndpoint) 
 .then(function(response)
 {
     response.json().then(function(data) {
    let val = Object.values(data) 
-   console.log(val)
-    
+   console.log(val) 
    if (val[1] === logInUser && val[0] === logInPass) {
     return document.write(
         `<!DOCTYPE html>
@@ -31,7 +32,7 @@ fetch(pullFromEndpoint)
         <body> 
         <script src="navbar.js"></script>
         <script> Navbarpasstohtml() </script>
-              <h1 class="docwrite"> we fucking did it beckky!
+              <h1 class="docwrite"> we fucking did it biotch!
               </h1> 
               </body>
             <div class="Paymentbtn"> <a href="payment.html">
@@ -49,5 +50,6 @@ fetch(pullFromEndpoint)
     console.log('Fetch Error:', error);
 });  
 }
+
 
 getCreds()
