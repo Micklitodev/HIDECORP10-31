@@ -6,15 +6,18 @@ const dbObject = {
   password: ''
 }
 
-const getCreds = () => {
-const logInUser = document.getElementById('logInUser')
-const logInPass = document.getElementById('logInPass')
 
 
-fetch(pullFromEndpoint) 
+async function getCreds () {
+const logInUser = document.getElementById('logInUser').value
+const logInPass = document.getElementById('logInPass').value
+console.log(logInUser)
+console.log(logInPass)
+
+await fetch(pullFromEndpoint) 
 .then(function(response)
 {
-    response.json().then(function(data) {
+   response.json().then(function(data) {
    let val = Object.values(data) 
    console.log(val) 
    if (val[1] === logInUser && val[0] === logInPass) {
@@ -51,5 +54,3 @@ fetch(pullFromEndpoint)
 });  
 }
 
-
-getCreds()
