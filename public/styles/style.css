@@ -1,7 +1,20 @@
 
+.blobdiv {
+  z-index: -1;
+  margin-top:  75px;
+  position: sticky;
+}
+
+#navbar { 
+	position: sticky; 
+	top: 0; 
+	z-index: 1; 
+} 
+
+
 body, html { 
   background: rgb(255, 255, 255); margin: 0;
-height: 200vh;}
+}
 
 canvas { position: absolute; }
 
@@ -28,9 +41,9 @@ canvas { position: absolute; }
 
 
 body {
-    background-size: cover;
-    background-image: url("../images/test2.jpeg") !important;  
-    /* background-color: rgb(243, 243, 243) !important; */
+    background-size: cover !important;
+    background-color: rgb(214, 255, 214) !important;
+    /* background-color: rgb(252, 255, 188); */
 }
 
 
@@ -39,22 +52,37 @@ body {
     margin-left: 443px;
 }
 
+
+img {
+  border-radius: 8px;
+}
+
+
+
 .divindeximg {
     margin-top: 50px;
     margin-left: 20px;
-}
+    opacity: .8;
+  
+    
+    
 
+}
 
 
 
 .divindeximg2 {
     margin-top: 50px;
-    margin-left: 620px;
+    margin-left: 1030px;
+    opacity: .8;
+   
 }
 
 .divindeximg3 {
     margin-top: 50px;
     margin-left: 20px;
+    opacity: .8;  
+    
 }
 
 
@@ -66,7 +94,7 @@ body {
 
 
 .div1 {
-    color:white; 
+    color:rgba(0, 0, 0, 0.697); 
     max-width: 370px;
     font-size: 12;
     column-width: 300px;
@@ -74,12 +102,11 @@ body {
     float: top;
     float: right;
     margin-right: 100px;
-  
 
 }
 
 .div2 {
-    color:white ; 
+  color:rgba(0, 0, 0, 0.697) ; 
     max-width: 370px;
     font-size: 12;
     column-width: 300px;
@@ -89,7 +116,7 @@ body {
 }  
 
 .div3 {
-    color:white ; 
+  color:rgba(0, 0, 0, 0.697) ; 
     max-width: 370px;
     font-size: 12;
     column-width: 300px;
@@ -101,7 +128,7 @@ body {
 }
 
 .div4 {
-    color:white ; 
+  color:rgba(0, 0, 0, 0.697) ; 
     max-width: 500px;
     font-size: 12;
     column-width: 500px;
@@ -119,13 +146,13 @@ body {
 
 .footer { 
     margin-top: 550px; 
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
     font: bold;
     margin-left: 475px;
 }
 
 .custom_nav .navbar.navbar-fixed-top .navbar-inner{
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.179);
 }
 
 .pricingform {
@@ -163,10 +190,12 @@ body {
     border: none;
     margin-top: 150px;
     float: right;
-    margin-right: 520px;
+    margin-right: 600px;
     text-decoration: none;
     font-family:system-ui;
     font-size: 50px;
+    height: 100px;
+    width: 200px; 
  
 }
 
@@ -347,3 +376,4 @@ body {
   margin-left: 900px;
 
 } */
+
