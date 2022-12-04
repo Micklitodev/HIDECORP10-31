@@ -1,15 +1,17 @@
 
+
+
 .blobdiv {
   z-index: -1;
-  margin-top:  75px;
+  margin-top:  20px;
   position: sticky;
 }
 
 #navbar { 
 	position: sticky; 
 	top: 0; 
-	z-index: 1; 
-} 
+	z-index: 100; 
+}
 
 
 body, html { 
@@ -42,8 +44,9 @@ canvas { position: absolute; }
 
 body {
     background-size: cover !important;
-    background-color: rgb(214, 255, 214) !important;
-    /* background-color: rgb(252, 255, 188); */
+    /* background-color: rgb(255, 255, 156) !important; */
+    background-color: rgb(243, 255, 230) !important;
+
 }
 
 
@@ -95,37 +98,47 @@ img {
 
 .div1 {
     color:rgba(0, 0, 0, 0.697); 
-    max-width: 370px;
+    max-width: 600px;
     font-size: 12;
-    column-width: 300px;
+    column-width: 500px;
     margin-top: -290px;
     float: top;
     float: right;
     margin-right: 100px;
-
+    position: relative; 
+    top: 0; 
+    z-index: 1; 
 }
 
 .div2 {
   color:rgba(0, 0, 0, 0.697) ; 
-    max-width: 370px;
+    max-width: 600px;
     font-size: 12;
-    column-width: 300px;
+    column-width: 500px;
     margin-top: -250px;
     margin-right: 100px;
     float:right;
-}  
+    position: relative; 
+    top: 0; 
+    z-index: 1; 
+}
+
 
 .div3 {
   color:rgba(0, 0, 0, 0.697) ; 
-    max-width: 370px;
+    max-width: 600px;
     font-size: 12;
-    column-width: 300px;
+    column-width: 500px;
     margin-top: 80px;
     float: left;
     margin-left: 50px;
+    position: relative; 
+    top: 0; 
+    z-index: 1; 
+}
     
 
-}
+
 
 .div4 {
   color:rgba(0, 0, 0, 0.697) ; 
@@ -148,11 +161,11 @@ img {
     margin-top: 550px; 
     color: rgb(0, 0, 0);
     font: bold;
-    margin-left: 475px;
+    margin-left: 525px;
 }
 
 .custom_nav .navbar.navbar-fixed-top .navbar-inner{
-    background: rgba(255, 255, 255, 0.179);
+    background: rgb(255, 255, 255);
 }
 
 .pricingform {
@@ -377,3 +390,8 @@ img {
 
 } */
 
+/* GOOGLEAPIFONTS {
+  font-family: 'Anek Devanagari', sans-serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+} */
