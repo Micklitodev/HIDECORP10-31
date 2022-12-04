@@ -92,8 +92,9 @@ img {
 
 .pricingimg {
     margin-top: 50px;
-    margin-left: 430px;
-}
+    position: relative;
+    margin-left: 500px;
+} 
 
 
 .div1 {
@@ -158,7 +159,7 @@ img {
 }
 
 .footer { 
-    margin-top: 550px; 
+    margin-top: 450px; 
     color: rgb(0, 0, 0);
     font: bold;
     margin-left: 525px;
@@ -171,8 +172,9 @@ img {
 .pricingform {
     max-width: 800px;
     margin-top: 50px;
-    margin-left: 285px;
+    margin:auto;
     color: white;
+    position: relative;
     
 }
 
@@ -193,9 +195,9 @@ img {
 }
 
 .docwrite {
-    margin-top: 300px;
-    margin-left: 350px;
-    color: white;
+    margin-top: 100px;
+    margin-left: 450px;
+    color:rgba(0, 0, 0, 0.697) ;
 }
 
 
@@ -314,14 +316,14 @@ img {
 
 
 .project1 {
-  color: #f2f2f2;
-  font-size: 50px;
+  color: rgba(0, 0, 0, 0.697);
+  font-size: 35px;
   padding: 8px 12px;
   position: absolute;
   top: 50px;
   width: 100%;
   text-align: center;
-  font-family:sys;
+  font-family:'Exo 2', sans-serif;
 
 }
 
@@ -332,12 +334,15 @@ img {
   height: 200px;
   width: 400px;
 
+
 }
 
 .title1projdir {
-  color:white ; 
+ 
   margin-top: 50px;
   margin-left: 180px;
+  color:rgba(0, 0, 0, 0.697);
+  font-family:'Exo 2', sans-serif;
 }
 
 .Paymentbtn {    
@@ -354,26 +359,17 @@ img {
   border: none;
   margin-top: 150px;
   float: right;
-  margin-right: 520px;
+  margin-right: 700px;
   text-decoration: none;
   font-family:system-ui;
   font-size: 50px;
 }
 
-.ecomButton {
-  border: none;
-  margin-top: 150px;
-  float: left;
-  margin-left: 520px;
-  text-decoration: none;
-  font-family:system-ui;
-  font-size: 50px;
-}
 
 .paypalButton {
   border: none;
   margin-top: 150px;
-  margin:auto;
+  margin-left: 714px;
   text-decoration: none;
   font-family:system-ui;
   font-size: 50px;
@@ -381,14 +377,15 @@ img {
 }
 
 .signUpHeader {
-  margin-left: 650px;
+  margin-left: 570px;
 }
 
 
-/* .signUpDiv {
-  margin-left: 900px;
+.signUpDiv {
+  margin-top: 500px;
+  margin-left: 515px;
 
-} */
+}
 
 /* GOOGLEAPIFONTS {
   font-family: 'Anek Devanagari', sans-serif;

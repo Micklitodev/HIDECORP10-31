@@ -1,4 +1,5 @@
 
+let price = []; 
 
 function condition1() {
 let value1 = document.getElementById('formSelect1').value
@@ -40,6 +41,7 @@ let valueEcom = 99;
                             }
 
                             if (result !== null )  {
+                                price.push(result)
                                 return document.write(
                                     `<!DOCTYPE html>
                                     <html lang="en">
@@ -49,24 +51,27 @@ let valueEcom = 99;
                                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
                                         <title>Price</title>
                                         <link href="styles/style.css" rel="stylesheet"/>
+                                        <script src="navbar.js"></script>
                                         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
                                     </head>
                                     <body> 
-                                    <script src="navbar.js"></script>
                                     <script> Navbarpasstohtml() </script>
                                           <h1 class="docwrite"> The price of your renderings by <br> our Expert Designers will cost:  <br><br> $${result}.00
                                           </h1> 
                                           </body>
                                         <div class="Paymentbtn"> <a href="payment.html">
-                                          <input type="button" value="Continue" />
+                                          <input type="button" class='btn btn-secondary' style='margin-right: 220px' value="Continue" />
                                         </a>
                                         </div>
                                         </html>
-                                        <br> 
-                                        <footer class="footer">Email: Micklito.dev@gmail.com | Phone: 470-831-4159 | <a href="contactus.html">
-                                      <input type="button" value="Contact Us" />
-                                    </a> </footer>`) 
-                            }
+                                      
+                                        <script>footerPassToHtml()</script>
+                                    </body>
+                                    </html> ${console.log(price)}`) 
+
+                            }  
+                            
+                            
+
 }; 
-
-
+ 

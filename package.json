@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "serve": "node src/server.js"
+    "serve": "node src/server.js" 
   },
   "dependencies": {
     "babel": "^6.23.0",

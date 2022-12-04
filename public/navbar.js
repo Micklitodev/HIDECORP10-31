@@ -9,19 +9,19 @@ function Navbarpasstohtml() {
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html" style="font-family: 'Exo 2', sans-serif;">HIDE INC</a>
+                  <a class="nav-link" href="index.html" style="font-family: 'Exo 2', sans-serif; margin-left: 150px; color: white; font-size: 18px;">HIDE INC</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="ProjectDir.html">Projects</a>
+                  <a class="nav-link" href="ProjectDir.html" style='margin-left:650px;'>Projects</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pricing.html">Pricing</a>
+                  <a class="nav-link" href="pricing.html" style='margin-left:20px;'>Pricing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contactus.html">Contact Us</a>
+                    <a class="nav-link" href="contactus.html" style='margin-left:20px;'>Contact Us</a>
                   </li>
                   <li class="nav-item">
-                  <a class="nav-link" href="login.html">Log In</a>
+                  <a class="nav-link" href="login.html" style='margin-left: 200px; '>Log In</a>
                 </li>
               </ul>
             </div>
