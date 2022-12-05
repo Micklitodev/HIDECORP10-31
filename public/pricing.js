@@ -49,10 +49,26 @@ let valueEcom = 99;
                                         <meta charset="UTF-8">
                                         <meta http-equiv="X-UA-Compatible" content="IE=edge">
                                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                        
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+
+<link
+href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+rel="stylesheet"
+/>
+
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
+rel="stylesheet"
+/>
+
                                         <title>Price</title>
                                         <link href="styles/style.css" rel="stylesheet"/>
                                         <script src="navbar.js"></script>
-                                        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+                                      
                                     </head>
                                     <body> 
                                     <script> Navbarpasstohtml() </script>
@@ -64,10 +80,11 @@ let valueEcom = 99;
                                         </a>
                                         </div>
                                         </html>
-                                      
+                                        <div style="margin-top:300px">
                                         <script>footerPassToHtml()</script>
+                                        </div>
                                     </body>
-                                    </html> ${console.log(price)}`) 
+                                    </html>`) 
 
                             }  
                             
@@ -75,3 +92,5 @@ let valueEcom = 99;
 
 }; 
  
+
+console.log(price)
